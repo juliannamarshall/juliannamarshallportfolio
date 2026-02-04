@@ -305,15 +305,29 @@ html{
         color: #007bff;
     }
 
+    .carousel-arrow:hover{
+        color: #006fe6;
+    }
+
     .btn-see-more {
         display: inline-block;
-        margin-top: 1.75rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: inherit;
+        color: black;
         background-color: #b6ff88;
-        padding: 0.5rem 1rem;
         border-radius: 999px;
         text-decoration: none;
-        color: black;
-        font-weight: 600;
+        margin-top: 1.75rem;
+        transition: 
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            background-color 0.2s ease;
+        }
+
+    .btn-see-more:hover {
+        background-color: #afff55;
     }
 
     /*Viewport Stylings*/
