@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Julianna Marshall</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="description" content="Julianna Marshall's personal portfolio website.">     
+        <!-- Link to Fraunces font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="images/icon.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!--Navigation-->
+            <nav class="navigation">
+                <a class="navigation_name" href="index.html">Julianna Marshall</a>
+                <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="navigation_pages">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <hr style="background-color: #fcc97c; height: 4px; border: none;">
+            <script>
+                const toggle = document.querySelector('.nav-toggle');
+                const nav = document.querySelector('.navigation_pages');
+
+                toggle.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                    toggle.classList.toggle('open');
+                    document.body.classList.toggle('menu-open');
+
+                    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', !expanded);
+                });
+            </script>
+
+        
+        <footer>
+            <hr style="background-color: #c1ff7b; height: 4px; border: none;">
+            <p>Designed and developed by Julianna Marshall.</p>
+        </footer>
+    </body>
+</html>

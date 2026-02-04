@@ -242,8 +242,84 @@ html{
 
             .hero-text {
                 max-width: 100%;
-                /* padding: 1.5rem; */
             }
         }
     }
 }
+
+/*Homepage Projects Section Styles*/
+.projects {
+    text-align: center;
+    padding: 2rem;
+
+    h2 {
+        font-size: 32px;
+        margin: 0 0 3.125rem 0;
+        text-align: left;
+        font-weight: normal;
+    }
+
+    .carousel-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        position: relative;
+    }
+
+    .carousel-track {
+        display: flex;
+        overflow: hidden;
+        width: 70%;
+        border-radius: 1rem;
+        padding: 2rem;
+        background-color: #ffcf88;
+        gap: 2rem;
+        scroll-behavior: smooth;
+    }
+
+    .carousel-item {
+        flex: 0 0 30%;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        height: auto; 
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    .carousel-arrow {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #007bff;
+    }
+
+    .btn-see-more {
+        display: inline-block;
+        margin-top: 1.75rem;
+        background-color: #b6ff88;
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+    }
+
+    /*Viewport Stylings*/
+    @media (max-width: 768px) {
+        .carousel-item {
+            flex: 0 0 80%;
+        }  
+    }
+} 
