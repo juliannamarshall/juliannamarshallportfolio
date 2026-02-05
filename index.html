@@ -72,11 +72,12 @@
             <div class="carousel-container">
                 <button class="carousel-arrow left">&#9664;</button>
                 <div class="carousel-track">
-                <div class="carousel-item"><img src="images/projects/rockin_for_robbie.png" alt="Project 1"></div>
-                <div class="carousel-item"><img src="images/projects/web1.png" alt="Project 2"></div>
-                <div class="carousel-item"><img src="images/projects/programming_contest.png" alt="Project 3"></div>
-                <div class="carousel-item"><img src="images/projects/web2.png" alt="Project 4"></div>
-                <div class="carousel-item"><img src="images/projects/march_of_dimes.png" alt="Project 5"></div>
+                    <div class="carousel-item"><img src="images/projects/rockin_for_robbie.png" alt="Project 1"></div>
+                    <div class="carousel-item"><img src="images/projects/web1.png" alt="Project 2"></div>
+                    <div class="carousel-item"><img src="images/projects/programming_contest.png" alt="Project 3"></div>
+                    <div class="carousel-item"><img src="images/projects/web2.png" alt="Project 4"></div>
+                    <div class="carousel-item"><img src="images/projects/march_of_dimes.png" alt="Project 5"></div>
+                    <div class="carousel-spacer"></div>
                 </div>
                 <button class="carousel-arrow right">&#9654;</button>
             </div>
@@ -130,20 +131,28 @@
                     if (dx > 50) scrollRight();
                     else if (dx < -50) scrollLeft();
                 });
-
-                // Infinite loop simulation
-                track.addEventListener('scroll', () => {
-                    const maxScroll = track.scrollWidth - track.clientWidth;
-                    if (track.scrollLeft <= 0) {
-                        track.scrollLeft = maxScroll - getItemWidth();
-                    } else if (track.scrollLeft >= maxScroll) {
-                        track.scrollLeft = getItemWidth();
-                    }
-                });
             </script>
         </section>
         <hr style="background-color: #ff6797; height: 4px; border: none;">
 
+        <!--Tech Summary-->
+        <section class="tech-summary">
+            <h2>Technical abilities at a glance</h2>
+            <span class="role-pill">Front-End Developer</span>
+            <p class="intro">Computer Science & Digital Media student with hands-on experience building responsive, accessible user interfaces using React, JavaScript, HTML, CSS, and Tailwind CSS.</p>
+            <p class="intro">Currently a Web Development Intern contributing modular UI components within a custom CMS in an Agile environment.</p>
+            <h3>Highlights</h3>
+            <ul class="highlights">
+                <li>Built reusable, responsive React components with a focus on accessibility and UX consistency.</li>
+                <li>Collaborated with designers and backend developers using Jira and GitHub.</li>
+                <li>Strong foundation in component-based architecture and modern front-end workflows.</li>
+            </ul>
+            <p class="tech-stack"><strong>Technology:</strong> React, JavaScript, HTML, CSS, Tailwind, Git, Accessibility, Responsive Design</p>
+            <a href="resume.html" class="resume-btn">View full resume</a>
+            <blockquote class="quote">“The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice.” – Brian Herbert</blockquote>
+        </section>
+
+        <!--Footer-->
         <footer>
             <hr style="background-color: #c1ff7b; height: 4px; border: none;">
             <p>Designed and developed by Julianna Marshall.</p>

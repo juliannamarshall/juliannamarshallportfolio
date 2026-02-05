@@ -268,18 +268,36 @@ html{
     }
 
     .carousel-track {
-        display: flex;
-        overflow: hidden;
+        /* overflow-x: auto;
+        overflow-y: hidden;
         width: 70%;
         border-radius: 1rem;
-        padding: 2rem;
         background-color: #ffcf88;
+        scroll-padding-right: 4rem;
+        display: flex;
+        padding: 2rem;
         gap: 2rem;
+        scroll-behavior: smooth; */
+
+        display: flex;
+        width: 70%;
+        background-color: #ffcf88;
+        border-radius: 1rem;
+        gap: 2rem;
+        padding: 2rem;
+        /* padding-right: calc(2rem + 30%); */
+        overflow-x: auto;
+        overflow-y: hidden;
         scroll-behavior: smooth;
+        scrollbar-width: none
+    }
+
+    .carousel-track::-webkit-scrollbar {
+        display: none;
     }
 
     .carousel-item {
-        flex: 0 0 30%;
+        flex: 0 0 calc((100% - 4rem) / 3);
         background: white;
         border: 1px solid #ccc;
         border-radius: 0.5rem;
@@ -295,6 +313,10 @@ html{
             height: auto;
             object-fit: contain;
         }
+    }
+
+    .carousel-spacer {
+        flex: 0 0 2rem;
     }
 
     .carousel-arrow {
@@ -337,3 +359,85 @@ html{
         }  
     }
 } 
+
+/*Homepage Tech Summary Section Styles*/
+.tech-summary {
+    padding: 2rem;
+
+    h2 {
+        font-size: 32px;
+        margin: 0 0 3.125rem 0;
+        text-align: left;
+        font-weight: normal;
+    }
+
+    .role-pill {
+        display: inline-block;
+        background-color: #2271da;
+        color: white;
+        padding: 0.35rem 0.75rem;
+        font-weight: 600;
+        border-radius: 0.25rem;
+        margin-bottom: 1.5rem;
+        font-size: 24px;
+        box-shadow: 0 0 0 9px #b6ff88;
+    }
+
+    .intro {
+        max-width: 720px;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    h3 {
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .highlights {
+        margin-left: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .highlights li {
+        margin-bottom: 0.5rem;
+    }
+
+    .tech-stack {
+        margin-bottom: 2rem;
+    }
+
+    .resume-btn {
+        display: inline-block;
+        background-color: #ffc97a;
+        padding: 0.5rem 1.25rem;
+        border-radius: 999px;
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        margin-bottom: 3rem;
+    }
+
+    .resume-btn:hover {
+        background-color: #ffb84d;
+    }
+
+    .quote {
+        margin-top: 3rem;
+        padding: 1rem;
+        background-color: #ffffc9;
+        border: 9px solid #ff6797;
+        font-style: italic;
+        max-width: 700px;
+        justify-self: center;
+    }
+
+    /*Viewport Stylings*/
+    @media (max-width: 376px) {
+        h3, .highlights, .tech-stack, .quote{
+            display: none;
+        }
+
+    }
+}
+
