@@ -59,6 +59,18 @@ html{
     background-color: #ff437e;
 }
 
+.role-pill {
+    display: inline-block;
+    background-color: #2271da;
+    color: white;
+    padding: 0.35rem 0.75rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    box-shadow: 0 0 0 9px #b6ff88;
+}
+
 /*Navigation Styles*/
 .navigation{
     display: flex;
@@ -374,18 +386,6 @@ html{
         font-weight: normal;
     }
 
-    .role-pill {
-        display: inline-block;
-        background-color: #2271da;
-        color: white;
-        padding: 0.35rem 0.75rem;
-        font-weight: 600;
-        border-radius: 0.25rem;
-        margin-bottom: 1.5rem;
-        font-size: 24px;
-        box-shadow: 0 0 0 9px #b6ff88;
-    }
-
     .intro {
         max-width: 720px;
         margin-bottom: 1rem;
@@ -564,6 +564,164 @@ html{
                 max-width: 13rem;
             }
         }
+    }
+}
+
+/*Resume Page Stylings*/
+.resume-hero{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    width: 100%;
+}
+
+.resume-hero-art-left{
+    background-image: url('images/resume/groove5.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+}
+
+.resume-hero-content{
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+
+.resume-hero-art-right{
+    background-image: url('images/resume/groove6.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+}
+
+.resume-hr {
+    width: 90%;
+}
+
+.resume-highlights{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-block: 2rem;
+}
+
+.resume-highlights-pic{
+    display: grid;
+}
+
+.resume-highlights-pic img{
+    width: 50%;
+    height: auto;
+    border-radius: 0.75rem; 
+    border: 9px solid #ffffc9; 
+    box-shadow: 0 0 0 9px #ff6797;
+    justify-self: end;
+}
+
+.resume-highlights-content h2{
+    justify-self: center;
+}
+
+.resume-experience, .resume-tech, .resume-education{
+    margin-inline: 5rem;
+}
+
+.resume-experience h2, .resume-tech h2, .resume-education h2{
+    margin-top: 2rem;
+}
+
+.experience h3{
+    font-weight: normal;
+    margin-top: 4rem;
+}
+
+.resume-hr-experience{
+    width: 25%;
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.individual-skill{
+    display: grid;
+}
+
+.individual-skill h3{
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.resume-hr-tech{
+    width: 50%;
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.resume-education{
+    display: grid;
+}
+
+.resume-education h2{
+    margin-bottom: 0;
+}
+
+.education{
+    margin-top: 2rem;
+}
+
+.education h3{
+    font-weight: normal;;
+}
+
+.resume-hr-ed{
+    width: 25%;
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+@media(max-width: 1024px){
+    .resume-hero{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .resume-hero-art-left,
+    .resume-hero-art-right{
+        display: none;
+    }
+
+    .resume-btn{
+        margin-bottom: 0;
+    }
+
+    .skills{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 376px){
+    .resume-highlights-pic{
+        display: none;
+    }
+
+    .resume-highlights{
+        grid-template-columns: 1fr;
+    }
+
+    .resume-highlights-content{
+        justify-self: center;
     }
 }
 
