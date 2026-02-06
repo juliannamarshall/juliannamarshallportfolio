@@ -3,6 +3,62 @@ html{
     font-family: 'Fraunces', serif;
 }
 
+.btn-see-more {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: black;
+    background-color: #b6ff88;
+    border-radius: 999px;
+    text-decoration: none;
+    margin-top: 1.75rem;
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+    }
+
+.btn-see-more:hover {
+    background-color: #afff55;
+}
+
+.resume-btn {
+    display: inline-block;
+    background-color: #ffc97a;
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.resume-btn:hover {
+    background-color: #ffb84d;
+}
+
+.btn-about {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: black;
+    background-color: #ff6797;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.btn-about:hover {
+    background-color: #ff437e;
+}
+
 /*Navigation Styles*/
 .navigation{
     display: flex;
@@ -203,26 +259,6 @@ html{
             p{
                 font-size: 20px;
             }
-
-            .btn-about {
-                display: inline-block;
-                padding: 0.75rem 1.5rem;
-                font-size: 1rem;
-                font-weight: 600;
-                font-family: inherit;
-                color: black;
-                background-color: #ff6797;
-                border-radius: 999px;
-                text-decoration: none;
-                transition: 
-                    transform 0.2s ease,
-                    box-shadow 0.2s ease,
-                    background-color 0.2s ease;
-            }
-
-            .btn-about:hover {
-                background-color: #ff437e;
-            }
         }
     }
 
@@ -268,24 +304,12 @@ html{
     }
 
     .carousel-track {
-        /* overflow-x: auto;
-        overflow-y: hidden;
-        width: 70%;
-        border-radius: 1rem;
-        background-color: #ffcf88;
-        scroll-padding-right: 4rem;
-        display: flex;
-        padding: 2rem;
-        gap: 2rem;
-        scroll-behavior: smooth; */
-
         display: flex;
         width: 70%;
         background-color: #ffcf88;
         border-radius: 1rem;
         gap: 2rem;
         padding: 2rem;
-        /* padding-right: calc(2rem + 30%); */
         overflow-x: auto;
         overflow-y: hidden;
         scroll-behavior: smooth;
@@ -329,27 +353,6 @@ html{
 
     .carousel-arrow:hover{
         color: #006fe6;
-    }
-
-    .btn-see-more {
-        display: inline-block;
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-        font-weight: 600;
-        font-family: inherit;
-        color: black;
-        background-color: #b6ff88;
-        border-radius: 999px;
-        text-decoration: none;
-        margin-top: 1.75rem;
-        transition: 
-            transform 0.2s ease,
-            box-shadow 0.2s ease,
-            background-color 0.2s ease;
-        }
-
-    .btn-see-more:hover {
-        background-color: #afff55;
     }
 
     /*Viewport Stylings*/
@@ -407,21 +410,6 @@ html{
         margin-bottom: 2rem;
     }
 
-    .resume-btn {
-        display: inline-block;
-        background-color: #ffc97a;
-        padding: 0.5rem 1.25rem;
-        border-radius: 999px;
-        text-decoration: none;
-        color: black;
-        font-weight: 600;
-        margin-bottom: 3rem;
-    }
-
-    .resume-btn:hover {
-        background-color: #ffb84d;
-    }
-
     .quote {
         margin-top: 3rem;
         padding: 1rem;
@@ -438,6 +426,144 @@ html{
             display: none;
         }
 
+    }
+}
+
+/*About Page Projects Background Styles*/
+.about-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-left: 6rem;
+    align-items: stretch;
+
+    .about-hero-content {
+        max-width: 28.188rem;
+        display: grid;
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    .about-hero-art {
+        background-image: url("images/about/groove3.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 100%;
+    }
+
+    .about-outside-art {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        justify-self: end;
+        width: 95%;
+
+        img {
+            max-width: 95%;
+            justify-self: end;
+            height: auto;
+        }
+    }
+
+    @media(max-width: 893px){
+        grid-template-columns: 1fr;
+        padding-inline: 1rem;
+
+        .about-hero-art{
+            display: none;
+        }
+
+        .about-hero-content{
+            text-align: center;
+            justify-self: center;
+            margin-left: 0 !important;
+        }
+
+        .about-outside-art{
+            
+            grid-template-columns: 1fr;
+            justify-self: center;
+
+            img{
+                justify-self: center;
+                max-width: 13rem;
+            }
+        }
+
+        .about-hero-content-favorites{
+            grid-template-rows: auto auto auto;
+            justify-self: center;
+
+            p, ul{
+                margin-left: 0 !important;
+            }
+        }
+    }
+
+    @media (max-width: 376px) {
+        .about-hero-hr {
+            margin-inline: 2rem;
+        }
+    }
+}
+
+.about-hero-hr{
+        margin-inline: 4rem;
+}
+
+/*About Page Favorites List Styles*/
+.about-hero-content-favorites {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 5% 25% 70%;
+}
+
+.about-outside-art-favorites{
+    width: 100%;
+    justify-self: center;
+    max-width: 95%;
+
+    img{
+        width: 100%;
+        height: auto;
+        justify-self: center;
+        max-width: 95%;
+    }
+
+    h2{
+        margin-top: 2rem;
+    }
+
+    .art-pics{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        box-sizing: border-box;
+    }
+
+    .art-content{
+        display: grid;
+        justify-content: center;
+    }
+
+    @media(max-width: 893px){
+        .art-pics{
+            grid-template-columns: 1fr;
+            justify-items: center;
+
+            img{
+                justify-self: center;
+                max-width: 13rem;
+            }
+        }
     }
 }
 
