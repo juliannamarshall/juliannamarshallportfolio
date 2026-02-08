@@ -914,3 +914,97 @@ html{
     }
 }
 
+/*Contact Page Stylings*/
+.contact-hero-art-left{
+    background-image: url('images/index/groove1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+}
+
+.contact-hero-art-right{
+    background-image: url('images/projects/groove7.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+}
+
+.contact{
+    margin: 2rem 4rem;
+}
+
+.message{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.touch{
+    justify-self: center;
+}
+
+.send{
+    width: 75%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 0.6rem;
+    border: 1px solid #777;
+    border-radius: 2px;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    align-self: center;
+    padding: 0.5rem 1.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    background-color: #1f6fe5; /* blue button */
+    border: none;
+    border-radius: 999px; /* pill shape */
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    opacity: 0.9;
+}
+
+.contact-resume{
+    display: grid;
+    justify-items: center;
+    margin-top: 4rem;
+}
+
+@media(max-width: 376px){
+    .contact-hero-art-left,
+    .contact-hero-art-right{
+        display: none;
+    }
+
+    .message{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    /* .contact{
+        display: grid;
+        text-align: center;
+        justify-items: center;
+    } */
+}
