@@ -59,6 +59,26 @@ html{
     background-color: #ff437e;
 }
 
+.btn-portfolio {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: white;
+    background-color: #2271da;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.btn-portfolio:hover {
+    background-color: #1f66c4;
+}
+
 .role-pill {
     display: inline-block;
     background-color: #2271da;
@@ -721,6 +741,175 @@ html{
     }
 
     .resume-highlights-content{
+        justify-self: center;
+    }
+}
+
+/*Projects Page Stylings*/
+.projects-hero{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    width: 100%;
+}
+
+.projects-hero-art-left{
+    background-image: url('images/resume/groove6.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+}
+
+.projects-hero-content{
+    width: 75%;
+    justify-self: center;
+    margin-block: 5rem;
+}
+
+.projects-hero-content h2{
+    font-weight: normal;
+}
+
+.projects-hero-art-right{
+    background-image: url('images/projects/groove7.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+}
+
+@media(max-width: 1024px){
+    .projects-hero{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .projects-hero-art-left,
+    .projects-hero-art-right{
+        display: none;
+    }
+}
+
+.foundation-work {
+    padding: 2rem 2rem;
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.project-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.project-image {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 9px solid #c1ff7b;
+    border-bottom: none;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.project-content {
+    background-color: #ffffc9;
+    border: 9px solid #ffcf88;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.project-content p{
+    margin-top: 0;
+}
+
+.project-content h4 {
+    font-size: 1.1rem;
+}
+
+.project-tech {
+    font-weight: 600;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+}
+
+.projects-btn{
+    width: fit-content;
+}
+
+#toolbar{
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects h3{
+        text-align: left;
+    }
+}
+
+.previous-portfolio{
+    padding: 2rem 4rem;
+}
+
+.portfolio-section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
+}
+
+.portfolio-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 0.75rem;
+    border: 9px solid #ffffc9;
+}
+
+.portfolio-content{
+    align-content: center;
+}
+
+@media(max-width: 769px){
+    .portfolio-section{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .portfolio-content{
+        justify-self: center;
+    }
+
+    .portfolio-image{
         justify-self: center;
     }
 }
