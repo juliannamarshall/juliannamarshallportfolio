@@ -73,118 +73,38 @@
                 <div class="projects-grid">
                     <article class="project-card">
                         <div class="project-image">
-                            <img src="images/projects/web1.png" alt="Screenshot of Foundation Project 1">
+                            <img src="images/projects/gli.jpeg" alt="Screenshot of Foundation Project 1">
                         </div>
                         <div class="project-content">
-                            <h4>Basic HTML Concepts</h4>
-                            <p class="language">HTML</p>
-                            <p class="description">Built a multi-page website using semantic HTML, focusing on proper structure, accessibility, and clean content organization.</p>
-                            <a class="btn-about projects-btn" href="projects.html">View Full Project</a>
+                            <h4>Castle Self Storage – Unit Table</h4>
+                            <p class="description">During my internship, I had the opportunity to contribute to updates and improvements for a client-facing self-storage website, 
+                            specifically styling the unit tables from the ground up. Working on a live production site introduced me to the responsibilities...</p>
+                            <a class="btn-about projects-btn" href="projects.html#gli">View Full Project</a>
                         </div>
                     </article>
                     <article class="project-card">
                         <div class="project-image">
-                            <img src="images/projects/web2.png" alt="Screenshot of Foundation Project 2">
+                            <img src="images/projects/web dev 2.jpeg" alt="Screenshot of Foundation Project 2">
                         </div>
                         <div class="project-content">
-                            <h4>Basic CSS Concepts</h4>
-                            <p class="language">HTML, CSS</p>
-                            <p class="description">Styled a content-driven site using modern CSS techniques including typography, layout, color systems, and visual hierarchy.</p>
-                            <a class="btn-about projects-btn" onclick="window.location.href='https://44-563-webapps-f24.github.io/44563-webapps-f24-assignment4-juliannamarshall/greekplay.html'">Visit Project</a>
-                        </div>
+                            <h4>Web Development II Group Project</h4>
+                            <p class="description">This project was completed as part of a group web development assignment where we collaborated to design and build a functional website
+                            from the ground up. Working as part of a team required us to divide responsibilities...</p>
+                            <a class="btn-about projects-btn" href="projects.html#wd2">View Full Project</a>                        </div>
                     </article>
                     <article class="project-card">
                         <div class="project-image">
-                            <img src="images/projects/web3.png" alt="Screenshot of Foundation Project 3">
+                            <img src="images/projects/web dev 1.jpeg" alt="Screenshot of Foundation Project 3">
                         </div>
                         <div class="project-content">
-                            <h4>Responsive Design & Bootstrap</h4>
-                            <p class="language">HTML, CSS, Bootstrap</p>
-                            <p class="description">Created a responsive layout using Bootstrap's grid system and component, ensuring usability across desktop, tablet, and mobile devices.</p>
-                            <a class="btn-about projects-btn" onclick="window.location.href='https://44-563-webapps-f24.github.io/44563-webapps-f24-assignment5-pages-juliannamarshall/desserts.html'">Visit Project</a>
-                        </div>
+                            <h4>Web Development I Group Project</h4>
+                            <p class="description">This portfolio-style website was created as part of my web development class project using WordPress. The goal of the project was to design and
+                            structure a website that clearly presented information while...</p>
+                            <a class="btn-about projects-btn" href="projects.html#wd1">View Full Project</a>                        </div>
                     </article>
                 </div>
                 <a class="btn-see-more" style="display: flex; width: fit-content; justify-self: center; margin-top: 3rem;" href="projects.html">See All Projects</a>
             </section>
-        <!-- <section class="featured-preview">
-            <h2>Featured Projects</h2>
-            <div class="featured-preview-grid">
-                <div class="preview-project">
-                    <img src="images/projects/gli.jpeg" alt="Storage site">
-                    <h3>Castle Self Storage</h3>
-                    <p>Client website developed during my internship.</p>
-                    <a class="btn-about" href="projects.html">View Project</a>
-                </div>
-            </div>
-            <a class="btn-see-more" href="projects.html">See All Projects</a>
-        </section> -->
-        <!-- <section class="projects">
-            <h2>Projects at a glance</h2>
-            <div class="carousel-container">
-                <button class="carousel-arrow left">&#9664;</button>
-                <div class="carousel-track">
-                    <div class="carousel-item"><img src="images/projects/rockin_for_robbie.png" alt="Project 1"></div>
-                    <div class="carousel-item"><img src="images/projects/web1.png" alt="Project 2"></div>
-                    <div class="carousel-item"><img src="images/projects/programming_contest.png" alt="Project 3"></div>
-                    <div class="carousel-item"><img src="images/projects/web2.png" alt="Project 4"></div>
-                    <div class="carousel-item"><img src="images/projects/march_of_dimes.png" alt="Project 5"></div>
-                    <div class="carousel-spacer"></div>
-                </div>
-                <button class="carousel-arrow right">&#9654;</button>
-            </div>
-            <a href="projects.html" class="btn-see-more">See more projects</a>
-            
-           <script>
-                const track = document.querySelector('.carousel-track');
-                const leftBtn = document.querySelector('.carousel-arrow.left');
-                const rightBtn = document.querySelector('.carousel-arrow.right');
-
-                let isScrolling = false;
-
-                // Scroll by one item width
-                function getItemWidth() {
-                    return track.querySelector('.carousel-item').offsetWidth + parseInt(getComputedStyle(track).gap || 0);
-                }
-
-                function scrollLeft() {
-                    if (isScrolling) return;
-                    isScrolling = true;
-                    track.scrollBy({ left: -getItemWidth(), behavior: 'smooth' });
-                    setTimeout(() => isScrolling = false, 400);
-                }
-
-                function scrollRight() {
-                    if (isScrolling) return;
-                    isScrolling = true;
-                    track.scrollBy({ left: getItemWidth(), behavior: 'smooth' });
-                    setTimeout(() => isScrolling = false, 400);
-                }
-
-                leftBtn.addEventListener('click', scrollLeft);
-                rightBtn.addEventListener('click', scrollRight);
-
-                // Touch swipe support
-                let startX = 0;
-                let scrollStart = 0;
-
-                track.addEventListener('touchstart', (e) => {
-                    startX = e.touches[0].clientX;
-                    scrollStart = track.scrollLeft;
-                });
-
-                track.addEventListener('touchmove', (e) => {
-                    const dx = startX - e.touches[0].clientX;
-                    track.scrollLeft = scrollStart + dx;
-                });
-
-                track.addEventListener('touchend', (e) => {
-                    const dx = startX - e.changedTouches[0].clientX;
-                    if (dx > 50) scrollRight();
-                    else if (dx < -50) scrollLeft();
-                });
-            </script>
-        </section> -->
         <hr style="background-color: #ff6797; height: 4px; border: none;">
 
         <!--Tech Summary-->
