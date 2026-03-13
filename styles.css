@@ -94,7 +94,11 @@ html{
 /*Navigation Styles*/
 .navigation{
     display: flex;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    padding: 1rem 0;
     ul {
         display: flex;
         list-style: none;
@@ -213,6 +217,16 @@ html{
             overflow: hidden;
         }
     }
+}
+
+.navigation::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fcc97c;
 }
 
 /*Homepage Hero Section Styles*/
