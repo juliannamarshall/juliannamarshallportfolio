@@ -1,0 +1,138 @@
+/*About Page Projects Background Styles*/
+.about-hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-left: 6rem;
+    align-items: stretch;
+}
+
+.about-hero-content{
+    max-width: 28.188rem;
+    display: grid;
+}
+
+.about-hero-content h1{
+    font-size: 32px;
+    margin-bottom: 1.5rem;
+}
+
+.about-hero-content p{
+    margin-bottom: 1.25rem;
+}
+
+.about-hero-art {
+    background-image: url("../images/about/groove3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.about-outside-art{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    justify-self: end;
+    width: 95%;
+}
+
+.about-outside-art img{
+    max-width: 95%;
+    justify-self: end;
+    height: auto;
+}
+    
+.about-hero-hr{
+    margin-inline: 4rem;
+}
+
+/*About Page Favorites List Styles*/
+.about-hero-content-favorites {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 5% 25% 70%;
+}
+
+.about-outside-art-favorites{
+    width: 100%;
+    justify-self: center;
+    max-width: 95%;
+}
+
+.about-outside-art-favorites img{
+    width: 100%;
+    height: auto;
+    justify-self: center;
+    max-width: 95%;
+}
+
+.about-outside-art-favorites h2{
+    margin-top: 2rem;
+}
+
+.art-pics{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.art-content{
+    display: grid;
+    justify-content: center;
+}
+
+/*Viewport Stylings*/
+@media (max-width: 376px) {
+    .about-hero-hr {
+        margin-inline: 2rem;
+    }
+}
+
+@media(max-width: 893px){
+    .about-hero{
+        grid-template-columns: 1fr;
+        padding-inline: 1rem;
+    }
+
+    .about-hero-art{
+        display: none;
+    }
+
+    .about-hero-content{
+        text-align: center;
+        justify-self: center;
+        margin-left: 0 !important;
+    }
+
+    .about-outside-art{ 
+        grid-template-columns: 1fr;
+        justify-self: center;    
+    }
+
+    .about-outside-art img{
+        justify-self: center;
+        max-width: 13rem;
+    }
+
+    .about-hero-content-favorites{
+        grid-template-rows: auto auto auto;
+        justify-self: center;
+    }
+
+    .about-hero-content-favorites p, ul{
+        margin-left: 0 !important;
+    }
+
+    .art-pics{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .art-pics img{
+        justify-self: center;
+        max-width: 13rem;
+    }
+}

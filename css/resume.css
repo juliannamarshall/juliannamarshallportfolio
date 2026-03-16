@@ -1,0 +1,68 @@
+/*Resume Page Stylings*/
+.resume-hero{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    width: 100%;
+}
+
+.resume-hero-art-left{
+    background-image: url('../images/resume/groove5.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.resume-hero-content{
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+
+.resume-hero-art-right{
+    background-image: url('../images/resume/groove6.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.resume-highlights{
+    margin-block: 2rem;
+}
+
+.resume-highlights-pic img{
+    width: 40%;
+    height: 30%;
+    border-radius: 0.75rem; 
+    border: 9px solid #ffffc9; 
+    box-shadow: 0 0 0 9px #ff6797;
+    display: flex;
+    margin-inline: auto;
+}
+
+/*Viewport Stylings*/
+@media(max-width: 376px){
+    .resume-highlights{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 1024px){
+    .resume-hero{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .resume-hero-art-left,
+    .resume-hero-art-right{
+        display: none;
+    }
+
+    .resume-btn{
+        margin-bottom: 0;
+    }
+}

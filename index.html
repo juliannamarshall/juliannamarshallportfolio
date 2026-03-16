@@ -10,38 +10,40 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="images/icon.png">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/index.css">
     </head>
+
     <body>
         <!--Navigation-->
-            <nav class="navigation">
-                <a class="navigation_name" href="index.html">Julianna Marshall</a>
-                <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="navigation_pages">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        <nav class="navigation">
+            <a class="navigation_name" href="index.html">Julianna Marshall</a>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navigation_pages">
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
            
-            <script>
-                const toggle = document.querySelector('.nav-toggle');
-                const nav = document.querySelector('.navigation_pages');
+        <script>
+            const toggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('.navigation_pages');
 
-                toggle.addEventListener('click', () => {
-                    nav.classList.toggle('active');
-                    toggle.classList.toggle('open');
-                    document.body.classList.toggle('menu-open');
+            toggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                toggle.classList.toggle('open');
+                document.body.classList.toggle('menu-open');
 
-                    const expanded = toggle.getAttribute('aria-expanded') === 'true';
-                    toggle.setAttribute('aria-expanded', !expanded);
-                });
-            </script>
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', !expanded);
+            });
+        </script>
 
         <!--Hero-->
         <section class="hero">
@@ -58,7 +60,7 @@
                 </div>
                 <div class="hero-text">
                     <h2>Hi there!</h2>
-                    <p>I’m Julianna Marshall,<br>thanks for reaching my page!</p>
+                    <p>I'm Julianna Marshall, a Front-End Developer focused on building responsive web experiences.</p>
                     <a href="about.html" class="btn-about">Learn more about me</a>
                 </div>
             </div>
@@ -68,7 +70,7 @@
         <!--Projects-->
         <section class="foundation-work">
                 <h2>Featured Projects</h2>
-                <h3 style="font-weight: normal; margin-bottom: 2rem;">Starting with the fundamentals, these in-class projects demonstrate my foundational skills in web development.</h3>
+                <p>These featured projects highlight my strongest web development work, including collaborative class projects and real-world client experience gained during my internship.</p>
                 <div class="projects-grid">
                     <article class="project-card">
                         <div class="project-image">
@@ -105,22 +107,60 @@
                 <a class="btn-see-more" style="display: flex; width: fit-content; justify-self: center; margin-top: 3rem;" href="projects.html">See All Projects</a>
             </section>
         <hr style="background-color: #ff6797; height: 4px; border: none;">
-
-        <!--Tech Summary-->
+        
+        <!--Technical Snapshot-->
         <section class="tech-summary">
             <h2>Technical abilities at a glance</h2>
-            <span class="role-pill">Front-End Developer</span>
-            <p class="intro">Computer Science & Digital Media student with hands-on experience building responsive, accessible user interfaces using React, JavaScript, HTML, CSS, and Tailwind CSS.</p>
-            <p class="intro">Currently a Web Development Intern contributing modular UI components within a custom CMS in an Agile environment.</p>
-            <h3>Highlights</h3>
-            <ul class="highlights">
-                <li>Built reusable, responsive React components with a focus on accessibility and UX consistency.</li>
-                <li>Collaborated with designers and backend developers using Jira and GitHub.</li>
-                <li>Strong foundation in component-based architecture and modern front-end workflows.</li>
-            </ul>
-            <p class="tech-stack"><strong>Technology:</strong> React, JavaScript, HTML, CSS, Tailwind, Git, Accessibility, Responsive Design</p>
-            <a href="resume.html" class="resume-btn">View full resume</a>
-            <blockquote class="quote">“The capacity to learn is a gift; the ability to learn is a skill; the willingness to learn is a choice.” – Brian Herbert</blockquote>
+            <div class="tech-summary-content">
+                <div class="intro-content">
+                    <span class="role-pill">Front-End Developer</span>
+                    <p>
+                        Computer Science & Digital Media student with hands-on experience
+                        building responsive and accessible web interfaces using modern
+                        front-end technologies.
+                        <br><br>
+                        Currently working as a Web Development Intern contributing modular
+                        UI components within a custom CMS in an Agile development
+                        environment.
+                    </p>
+                </div>
+                <div class="highlights-content">
+                    <h3>Highlights</h3>
+                    <ul class="highlights">
+                        <li>Built reusable responsive React components focused on accessibility and UX consistency.</li>
+                        <li>Collaborated with designers and backend developers using Jira and GitHub.</li>
+                        <li>Strong foundation in component-based architecture and modern front-end workflows.</li>
+                    </ul>
+
+                    <div class="tech-stack">
+                        <p>Tech Stack:</p>
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Accessibility</span>
+                        <span>Responsive Design</span>
+                        <p> and more!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Call to Action-->
+        <section class="connect">
+            <h2>Let's Connect!</h2>
+            <p>
+                I'm currently seeking opportunities where I can continue developing my
+                skills in front-end development and user interface design.
+            </p>
+            <p>
+                If you'd like to learn more about my experience or discuss potential
+                opportunities, feel free to explore my resume or reach out!
+            </p>
+            <div class="connect-buttons">
+                <a href="resume.html" class="resume-btn">View Resume</a>
+                <a href="contact.html" class="btn-see-more">Contact Me</a>
+            </div>
         </section>
 
         <!--Footer-->
